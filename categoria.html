@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+   <head>
+      <meta charset="UTF-8">
+      <title> LOJA_ONLINE </title>
+      <link rel="shortcut icon" type="image/x-icon" href="images/Pagina_Principal/index.ico">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!--enable mobile device-->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!--fontawesome css-->
+      <link rel="stylesheet" href="css/font-awesome.min.css">
+      <!--bootstrap css-->
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <!--animate css-->
+      <link rel="stylesheet" href="css/animate-wow.css">
+      <!--main css-->
+      <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href="css/bootstrap-select.min.css">
+      <link rel="stylesheet" href="css/slick.min.css">
+      <link rel="stylesheet" href="css/jquery-ui.css">
+      <!--responsive css-->
+      <link rel="stylesheet" href="css/responsive.css">
+   </head>
+   <body>
+      <header id="header" class="top-head">
+         <!-- Static navbar -->
+         <nav class="navbar navbar-default">
+            <div class="container-fluid">
+               <div class="row">
+                  <div class="col-md-4 col-sm-12 left-rs">
+                     <div class="navbar-header">
+                        <button type="button" id="top-menu" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"> 
+                        <span class="sr-only"> Mudar a Navegação</span> 
+                        <span class="icon-bar"></span> 
+                        <span class="icon-bar"></span> 
+                        <span class="icon-bar"></span> 
+                        </button>
+                        <a href="index.html" class="navbar-brand"><img src="images/Pagina_Principal/Marca.1.png" alt="" /></a>
+                     </div>
+                     <form class="navbar-form navbar-left web-sh">
+                        <div class="form">
+                         <!--  <input type="text" class="form-control" placeholder=" Pesquisa Aqui "> -->
+                        </div>
+                     </form>
+                  </div>
+                  <div class="col-md-8 col-sm-12">
+                     <div class="right-nav">
+                        <div class="login-sr">
+                           <div class="login-signup">
+                           <!--   <ul>
+                                 <li><a href="#">Login</a></li>
+                                 <li><a class="custom-b" href="#">Entrar</a></li>
+                              </ul> -->
+                           </div>
+                        </div>
+                        <div class="help-r hidden-xs">
+                           <div class="help-box">
+                              <ul>
+                                 <li> <a data-toggle="modal" data-target="#myModal" href="#"> <span>Suporte</span> <img src="images/Pagina_Principal/Suporte.png" alt="" /> </a> </li>
+                              
+                              </ul>
+                           </div>
+                        </div>
+                        <div class="nav-b hidden-xs">
+                           <div class="nav-box">
+                              <ul>
+                                <!--   <li><a href="#">Como Funciona</a></li>  -->
+                                 <li><a href="sobre.html">Sobre Nós</a></li>
+                              </ul>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!--/.container-fluid --> 
+         </nav>
+      </header>
+      <!-- Modal -->
+      <div class="modal fade lug" id="myModal" role="dialog">
+         <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+               <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h4 class="modal-title">Contatos</h4>
+               </div>
+               <div class="modal-body">
+                  <ul>
+                     <li><a href="#"><img src="images/Pagina_Principal/Email.png" alt="" />contato@lojaoline.online</a></li>
+                     <li><a href="#"><img src="images/Pagina_Principal/WhatsApp.png" alt="" />(062) 9 9248-6492</a></li>
+                     <li><a href="#"><img src="images/Pagina_Principal/Telefone.png" alt="" />(062)  3313-5127</a></li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div id="sidebar" class="top-nav">
+         <ul id="sidebar-nav" class="sidebar-nav">
+            <li><a href="index.html">Pagina Inicial</a></li>
+            <li><a href="#">Categoria</a></li>
+            <li><a href="#">Como funciona</a></li>
+            <li><a href="#">Informações</a></li>
+            <li><a href="#">Novidades</a></li>
+            <li><a href="#">Perfil</a></li>
+            <li><a href="#">Quen Somos</a></li>
+            <li><a href="#">Valores</a></li>
+         </ul>
+      </div>
+      <div class="furniture-box">
+         <div class="terms-title">
+            <div class="container">
+               <div class="row">
+                  <ol class="breadcrumb">
+                     <li><a href="index.html">Pagina Inicial </a></li>
+                     <li class="active">Produtos</li>
+                  </ol>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="furniture-box">
+         <div class="container">
+            <div class="row">
+               <div class="furniture-main">
+                  <h2>Produtos</h2>
+                  <div class="col-md-3 col-sm-4">
+                     <div class="furniture-left">
+                        <h3>
+                           Filtrar produtos</h3>
+                        <div class="by-box">
+                           <h5>Por preço</h5>
+                           <div id="slider-range"></div>
+                           <p>
+                              <input type="text" id="amount" readonly style="">
+                           </p>
+                        </div>
+                        <div class="by-com">
+                           <h5>Por Categorias</h5>
+                           <div class="list-b">
+                              <div id="boxscroll">
+                                 <div class="form-check">
+                                    <input id="checkbox1" class="filled-in chk-col-blue" type="checkbox">
+                                    <label for="checkbox1">
+                                    Curso de Unhas
+                                    </label>
+                                 </div>
+                                 <div class="form-check">
+                                    <input id="checkbox2" class="filled-in chk-col-blue" type="checkbox">
+                                    <label for="checkbox2">
+                                    Curso de Maquiagem
+                                    </label>
+                                 </div>
+                                 <div class="form-check">
+                                    <input id="checkbox3" class="filled-in chk-col-blue" type="checkbox">
+                                    <label for="checkbox3">
+                                    Dieta em 17 Dias
+                                    </label>
+                                 </div>
+                                 <div class="form-check">
+                                    <input id="checkbox4" class="filled-in chk-col-blue" type="checkbox">
+                                    <label for="checkbox4">
+                                    Curso correto Online
+                                    </label>
+                                 </div>
+                                 <div class="form-check">
+                                    <input id="checkbox5" class="filled-in chk-col-blue" type="checkbox">
+                                    <label for="checkbox5">
+                                    Curso de Sombrocelhas
+                                    </label>
+                                 </div>
+                                 <div class="form-check">
+                                    <input id="checkbox6" class="filled-in chk-col-blue" type="checkbox">
+                                    <label for="checkbox6">
+                                    Salcano
+                                    </label>
+                                 </div>
+                                 <div class="form-check">
+                                    <input id="checkbox7" class="filled-in chk-col-blue" type="checkbox">
+                                    <label for="checkbox7">
+                                    Curso many Chat
+                                    </label>
+                                 </div>
+                                 <div class="form-check">
+                                    <input id="checkbox8" class="filled-in chk-col-blue" type="checkbox">
+                                    <label for="checkbox8">
+                                    Robor Milionário
+                                    </label>
+                                 </div>
+                                 <div class="form-check">
+                                    <input id="checkbox9" class="filled-in chk-col-blue" type="checkbox">
+                                    <label for="checkbox9">
+                                    Robô Marvim
+                                    </label>
+                                 </div>
+                                 <div class="form-check">
+                                    <input id="checkbox10" class="filled-in chk-col-blue" type="checkbox">
+                                    <label for="checkbox10">
+                                    Mais rico
+                                    </label>
+                                 </div>
+                                 <div class="form-check">
+                                    <input id="checkbox11" class="filled-in chk-col-blue" type="checkbox">
+                                    <label for="checkbox11">
+                                 importação 2.0
+                                    </label>
+                                 </div>
+                                 <div class="form-check">
+                                    <input id="checkbox12" class="filled-in chk-col-blue" type="checkbox">
+                                    <label for="checkbox12">
+                                  warley lindo
+                                    </label>
+                                 </div>
+                                 <div class="form-check">
+                                    <input id="checkbox13" class="filled-in chk-col-blue" type="checkbox">
+                                    <label for="checkbox13">
+                                    cleude gostosa
+                                    </label>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="left-list-f">
+                           <div class="panel-group" id="accordion">
+                              <div class="panel panel-default">
+                                 <div class="panel-heading">
+                                    <h4 data-toggle="collapse" data-parent="#accordion" href="#collapse1" class="panel-title expand">
+                                       <div class="right-arrow pull-right"><span class="caret"></span></div>
+                                       <a href="#">Ordenar por</a>
+                                    </h4>
+                                 </div>
+                                 <div id="collapse1" class="panel-collapse collapse">
+                                    <div class="panel-body">vou escrever algo ainda texte,</div>
+                                 </div>
+                              </div>
+                              <div class="panel panel-default">
+                                 <div class="panel-heading">
+                                    <h4 data-toggle="collapse" data-parent="#accordion" href="#collapse2" class="panel-title expand">
+                                       <div class="right-arrow pull-right"><span class="caret"></span></div>
+                                       <a href="#">Local de envio (país)</a>
+                                    </h4>
+                                 </div>
+                                 <div id="collapse2" class="panel-collapse collapse">
+                                    <div class="panel-body">vou escrever algo ainda texte,</div>
+                                 </div>
+                              </div>
+                              <div class="panel panel-default">
+                                 <div class="panel-heading">
+                                    <h4 data-toggle="collapse" data-parent="#accordion" href="#collapse3" class="panel-title expand">
+                                       <div class="right-arrow pull-right"><span class="caret"></span></div>
+                                       <a href="#">Estilo</a>
+                                    </h4>
+                                 </div>
+                                 <div id="collapse3" class="panel-collapse collapse">
+                                    <div class="panel-body">vou escrever algo ainda texte,</div>
+                                 </div>
+                              </div>
+                              <div class="panel panel-default">
+                                 <div class="panel-heading">
+                                    <h4 data-toggle="collapse" data-parent="#accordion" href="#collapse4" class="panel-title expand">
+                                       <div class="right-arrow pull-right"><span class="caret"></span></div>
+                                       <a href="#">Tipo de Padrão</a>
+                                    </h4>
+                                 </div>
+                                 <div id="collapse4" class="panel-collapse collapse">
+                                    <div class="panel-body">vou escrever algo ainda texte,</div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-md-6 col-sm-8">
+                     <div class="furniture-middle">
+                        <div class="big-box">
+                           <div class="big-img-box">
+                              <img src="images/lag-60.png" alt="#" />
+                           </div>
+                           <div class="big-dit-b clearfix">
+                              <div class="col-md-6">
+                                 <div class="left-big">
+                                    <h3>
+                                       É também pode ser importante sempre </h3>
+                                    <p>Por <span>Warley está</span> Embaixo <span>Cursos</span></p>
+                                    <div class="prod-btn">
+                                       <a href="#"><i class="fa fa-star" aria-hidden="true"></i> Salva na sua lista</a>
+                                       <a href="#"><i class="fa fa-thumbs-up" aria-hidden="true"></i> Como Assim</a>
+                                       <p>1000 Curtidas</p>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="col-md-6">
+                                 <div class="right-big-b">
+                                    <div class="tight-btn-b clearfix">
+                                       <a class="view-btn" href="#">
+                                          Visão</a>
+                                       <a href="#">R$ 97,00</a>
+                                    </div>
+                                    <div class="like-list">
+                                       <ul>
+                                          <li>
+                                             <div class="im-b"><img class="" src="images/list-img-01.png" alt="" /></div>
+                                          </li>
+                                          <li>
+                                             <div class="im-b"><img src="images/list-img-02.png" alt="" /></div>
+                                          </li>
+                                          <li>
+                                             <div class="im-b"><img src="images/list-img-03.png" alt="" /></div>
+                                          </li>
+                                          <li>
+                                             <div class="im-b"><img src="images/list-img-04.png" alt="" /></div>
+                                          </li>
+                                          <li>
+                                             <div class="im-b"><img src="images/list-img-05.png" alt="" /></div>
+                                          </li>
+                                          <li>
+                                             <div class="im-b"><img src="images/list-img-06.png" alt="" /></div>
+                                          </li>
+                                          <li>
+                                             <div class="im-b"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></div>
+                                          </li>
+                                       </ul>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="row cat-pd">
+                           <div class="col-md-6 col-sm-6">
+                              <div class="small-box-c">
+                                 <div class="small-img-b">
+                                    <img src="images/tr1.png" alt="#" />
+                                 </div>
+                                 <div class="dit-t clearfix">
+                                    <div class="left-ti">
+                                       <h4>Cursos de Maquiagem</h4>
+                                       <p>De <span>197</span> Por 97 <span>Promoção</span></p>
+                                    </div>
+                                    <a href="#" tabindex="0">R$ 97,00</a>
+                                 </div>
+                                 <div class="prod-btn">
+                                    <a href="#"><i class="fa fa-star" aria-hidden="true"></i> Salvar na sua Lista</a>
+                                    <a href="#"><i class="fa fa-thumbs-up" aria-hidden="true"></i> Como Assim</a>
+                                    <p>2000 Curtidas</p>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col-md-6 col-sm-6">
+                              <div class="small-box-c">
+                                 <div class="small-img-b">
+                                    <img src="images/tr2.png" alt="#" />
+                                 </div>
+                                 <div class="dit-t clearfix">
+                                    <div class="left-ti">
+                                       <h4>Robôr Milionário</h4>
+                                       <p>De <span>297</span> Por <span>147</span>Promoção Relapada</p>
+                                    </div>
+                                    <a href="#" tabindex="0">R$ 147,00</a>
+                                 </div>
+                                 <div class="prod-btn">
+                                    <a href="#"><i class="fa fa-star" aria-hidden="true"></i> Salvar na Lista</a>
+                                    <a href="#"><i class="fa fa-thumbs-up" aria-hidden="true"></i> Como Assim</a>
+                                    <p>5000 Curtidas</p>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="big-box">
+                           <div class="big-img-box">
+                              <img src="images/lag-61.png" alt="" />
+                           </div>
+                           <div class="big-dit-b clearfix">
+                              <div class="col-md-6">
+                                 <div class="left-big">
+                                    <h3>Dieta em 17 Dias </h3>
+                                    <p>De <span>200</span> Por<span>120</span>Aproveita a promoção</p>
+                                    <div class="prod-btn">
+                                       <a href="#"><i class="fa fa-star" aria-hidden="true"></i>Salva na Lista</a>
+                                       <a href="#"><i class="fa fa-thumbs-up" aria-hidden="true"></i>Como Assim</a>
+                                       <p>7000 Curtidas</p>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="col-md-6">
+                                 <div class="right-big-b">
+                                    <div class="tight-btn-b clearfix">
+                                       <a class="view-btn" href="#">Visão</a>
+                                       <a href="#">R$ 120,00</a>
+                                    </div>
+                                    <div class="like-list">
+                                       <ul>
+                                          <li>
+                                             <div class="im-b"><img class="" src="images/list-img-01.png" alt="" /></div>
+                                          </li>
+                                          <li>
+                                             <div class="im-b"><img src="images/list-img-02.png" alt="" /></div>
+                                          </li>
+                                          <li>
+                                             <div class="im-b"><img src="images/list-img-03.png" alt="" /></div>
+                                          </li>
+                                          <li>
+                                             <div class="im-b"><img src="images/list-img-04.png" alt="" /></div>
+                                          </li>
+                                          <li>
+                                             <div class="im-b"><img src="images/list-img-05.png" alt="" /></div>
+                                          </li>
+                                          <li>
+                                             <div class="im-b"><img src="images/list-img-06.png" alt="" /></div>
+                                          </li>
+                                          <li>
+                                             <div class="im-b"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></div>
+                                          </li>
+                                       </ul>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="row cat-pd">
+                           <div class="col-md-6 col-sm-6">
+                              <div class="small-box-c">
+                                 <div class="small-img-b">
+                                    <img src="images/tr3.png" alt="#" />
+                                 </div>
+                                 <div class="dit-t clearfix">
+                                    <div class="left-ti">
+                                       <h4>Robor Many Chat</h4>
+                                       <p>De <span>300,00</span> Por <span>150</span>50% de Desconto</p>
+                                    </div>
+                                    <a href="#" tabindex="0">R$ 150,00</a>
+                                 </div>
+                                 <div class="prod-btn">
+                                    <a href="#"><i class="fa fa-star" aria-hidden="true"></i> Salvar na lista</a>
+                                    <a href="#"><i class="fa fa-thumbs-up" aria-hidden="true"></i>Como Asssim</a>
+                                    <p>24500 Curtidas</p>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col-md-6 col-sm-6">
+                              <div class="small-box-c">
+                                 <div class="small-img-b">
+                                    <img src="images/tr4.png" alt="#" />
+                                 </div>
+                                 <div class="dit-t clearfix">
+                                    <div class="left-ti">
+                                       <h4>Curso mais rico</h4>
+                                       <p>De <span>456,00</span> Por <span>250,00</span> Aproveita quase 70% de Desconto</p>
+                                    </div>
+                                    <a href="#" tabindex="0">R$ 250,00</a>
+                                 </div>
+                                 <div class="prod-btn">
+                                    <a href="#"><i class="fa fa-star" aria-hidden="true"></i>Salva na Lista</a>
+                                    <a href="#"><i class="fa fa-thumbs-up" aria-hidden="true"></i>Como Assim</a>
+                                    <p>1000 Curtidas</p>
+                                    <p>4000 lcurtidas</p>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-md-3 hidden-xs">
+                     <div class="furniture-right">
+                        <h3>Categorias</h3>
+                        <div class="right-list-f">
+                           <ul>
+                              <li><a href="#"><img width="32" src="images/product/1.png" alt="#" /> Cursos de unhas</a></li>
+                              <li><a href="#"><img width="32" src="images/product/2.png" alt="#" /> Curso de Maquiagem</a></li>
+                              <li><a href="#"><img width="32" src="images/product/1.png" alt="" /> Curso de unhas especias</a></li>
+                              <li><a href="#"><img width="32" src="images/product/4.png" alt="" /> Dieta em 17 Dias</a></li>
+                              <li><a href="#"><img width="32" src="images/product/5.png" alt="" /> Curso Corretor Online</a></li>
+                              <li><a href="#"><img width="32" src="images/product/2.png" alt="" /> Curso de Maquiagem</a></li>
+                              <li><a href="#"><img width="32" src="images/product/11.png" alt="" /> Curso many Chat</a></li>
+                              <li><a href="#"><img width="32" src="images/product/10.png" alt="" /> Curso de Sombrocelhas</a></li>
+                              <li><a href="#"><img width="32" src="images/product/4.png" alt="" /> Dieta em 17 Dias</a></li>
+                              <li><a href="#"><img width="32" src="images/product/10.png" alt="" /> Curso de Sombrocelhas</a></li>
+                              <li><a href="#"><img width="32" src="images/product/11.png" alt="" /> Curso many Chat</a></li>
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="loding-box">
+                     <a href="#">
+                        <div class="sk-wave">
+                           <div class="sk-rect sk-rect1"></div>
+                           <div class="sk-rect sk-rect2"></div>
+                           <div class="sk-rect sk-rect3"></div>
+                           <div class="sk-rect sk-rect4"></div>
+                           <div class="sk-rect sk-rect5"></div>
+                        </div>
+                        <span>produtos mais impressionantes ...</span>
+                     </a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <footer>
+         <div class="main-footer">
+            <div class="container">
+               <div class="row">
+                  <div class="footer-top clearfix">
+                     <div class="col-md-2 col-sm-6">
+
+                        <h2> Deixa Aqui Seu  Contato!!! </h2>
+
+                     </div>
+                     <div class="col-md-6 col-sm-6">
+                        <div class="form-box">
+                              <form action="http://www.lojaonline.online" method="POST"> 
+                              <input type="hidden" name="recipient" value="warleycoutinho@icloud.com"> <!-- Pode ser qualquer endereço de email -->
+                              <input type="hidden" name="redirect" value="index"> <!-- Após o envio, o usuário será redirecionado para a página configurada aqui -->
+                              <input type="hidden" name="subject" value="Obrigado ">  <!-- Assunto da mensagem -->
+                              <input type="hidden" name="email" value="warleycoutinho@iclou.com">   <!-- Deve ser uma conta de email ativa em seu domínio -->
+                                  
+                                    <a> Nome:<br/><input type="text" placeholder=" Digita Seu Nome " size="30" name="nome"></a>   
+                                    <a> E-mail:<br/><input type="text" placeholder=" Digita Seu E-mail " size="30" name="replyto"></a>   
+                                    <a> Comentários:<br/><input type="text" placeholder=" Deixa Seu Comentário " size="35" name="Comentarios"></p>  
+                                    <p> <input type="submit" name="BTEnvia" value="Enviar"></p> 
+                                    <p> <input type="reset" name="BTApaga" value="Apagar"></p> </form>
+                        </div>
+                     </div>
+                     <div class="col-md-4 col-sm-12">
+                        <div class="help-box-f">
+                           <h4>Contatos da Loja e Suporte Tecnico!!! </h4>
+                           <h2> Numeros Whatsapp </h2>
+                           <p>  (62) 9 9248-6492 ou (62) 3313-5127 </p>
+                           <p>Suporte para tira todos as duvidas de Segunda 
+                              a Sabados das 8:00hrs até 22:00hrs</p>
+
+                        </div>
+                     </div>
+                  </div>
+                  <div class="footer-link-box clearfix">
+                     <div class="col-md-6 col-sm-6">
+                        <div class="left-f-box">
+                           <div class="col-sm-4">
+                              <h2>VENDAS PELA LOJA </h2>
+                              <ul>
+                                 <li><a href="produtoum.html">Curso de Unhas</a></li>
+                                 <li><a href="produtocinco.html">Curso de Sobrancelhas </a></li>
+                                 <li><a href="produtosete.html"> Curso Robô Milionários</a></li>
+                                 <li><a href="produtodois.html">Curso de Maquiagem na Web</a></li>
+                              </ul>
+                           </div>
+                           <div class="col-sm-4">
+                              <h2>VENDAS PELA LOJA</h2>
+                              <ul>
+                                 <li><a href="produtooito.html">Curso Robô Marvin Global Af</a></li>
+                                 <li><a href="produtoseis.html">Curso de Tecnico de Enfermagem</a></li>
+                                 <li><a href="produtoquatro.html">Curso Corretor Online</a></li>
+                                 <li><a href="produtotres.html"> Curso de Dieta em 17 Dias </a></li>
+                                 <li><a href="produtonove.html"> Curso de Dieta em 21  Dias </a></li>
+                              </ul>
+                           </div>
+                           <div class="col-sm-4">
+                              <h2> Empresas Que Somos Afiliados </h2>
+                              <ul>
+                                 <li><a href="http://bit.ly/Warley_Coutinho_Afiliado ">Monetizze</a></li>
+                                 <li><a href="https://app-vlc.hotmart.com/login">Hotmart</a></li>
+                                 <li><a href="https://orbita.eduzz.com/login">Eduzz Orbita</a></li>
+                                 <li><a href="https://www.magazinevoce.com.br/magazinewarleycoutinho">Magazine Luiza</a></li>
+                                 <li><a href="https://www.wish.com/dl/share">Wish</a></li>
+                              </ul>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-md-6 col-sm-6">
+                        <div class="right-f-box">
+                           <h2>TIPOS DE CURSOS </h2>
+                           <ul class="col-sm-4">
+                              <li><a href="#">Vendas Online</a></li>
+                              <li><a href="#">Negócios Online </a></li>
+                              <li><a href="#">Maquiagem</a></li>
+                              <li><a href="#">Sobrancelhas</a></li>
+                              <li><a href="#">Saude</a></li>
+                           </ul>
+                           <ul class="col-sm-4">
+                              <li><a href="#">Dietas</a></li>
+                              <li><a href="#">Receitas de Bolos</a></li>
+                              <li><a href="#">Outras Receitas</a></li>
+                              <li><a href="#">Corretor de Moveis</a></li>
+                              <li><a href="#">Importações</a></li>
+                           </ul>
+                           <ul class="col-sm-4">
+                              <li><a href="#">Cosméticas</a></li>
+                              <li><a href="#">Alimentação</a></li>
+                              <li><a href="#">Joalheria</a></li>
+                              <li><a href="#">Manutenções de Celulares </a></li>
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="copyright">
+            <div class="container">
+               <div class="row">
+                  <div class="col-md-8">
+                     <p><img width="90" src="images/Pagina_Principal/index.ico" alt="#" style="margin-top: -5px;" 
+                        /> Todos os direitos reservados. LOJA_ONLINE © 2020</p>
+                  </div>
+                  <div class="col-md-4">
+                     <ul class="list-inline socials">
+
+                        <li><a href=""><img src="images/Pagina_Principal/Facebook.png" alt=" Facebook" /></a></li>
+
+                        <li><a href=""><img src="images/Pagina_Principal/Instagram.png" alt="Instagram"></i></a></li>
+
+                        <li><a href="#"><img src="images/Pagina_Principal/WhatsApp.png" alt="WhatsApp"> </i></a></li>
+                     </ul>
+                     <ul class="right-flag">
+                        <li> <a data-toggle="modal" data-target="#myModal" href="#"> <span>Suporte</span> <img src="images/Pagina_Principal/Suporte.png" alt="" /> </a> </li>
+                      </ul>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </footer>
+      <!--main js--> 
+      <script src="js/jquery-1.12.4.min.js"></script> 
+      <!--bootstrap js--> 
+      <script src="js/bootstrap.min.js"></script> 
+      <script src="js/bootstrap-select.min.js"></script>
+      <script src="js/slick.min.js"></script> 
+      <script src="js/wow.min.js"></script>
+      <!--custom js--> 
+      <script src="js/custom.js"></script>
+   </body>
+</html>
